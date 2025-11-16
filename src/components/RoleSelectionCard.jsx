@@ -13,7 +13,7 @@ function RoleSelectionCard() {
 
       <CardContent className="flex flex-col gap-6">
         <Button
-          onClick={() => (window.location.href = "/student")}
+          onClick={() => (window.location.href = "/login")}
           className="relative overflow-hidden w-full h-auto px-5 py-4 rounded-[14px] 
           text-white text-left flex flex-col items-start gap-1"
         >
@@ -31,7 +31,7 @@ function RoleSelectionCard() {
         </Button>
 
         <Button
-          onClick={() => (window.location.href = "/lecturer")}
+          onClick={() => (window.location.href = "/login")}
           className="relative overflow-hidden w-full h-auto px-5 py-4 rounded-[14px] 
           text-white flex flex-col items-start gap-1"
         >
