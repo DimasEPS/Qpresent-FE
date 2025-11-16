@@ -60,6 +60,7 @@ function Login() {
           {/* button */}
           <div className=" flex gap-4 justify-center">
             <Button
+              onClick={() => (window.location.href = "/role-selection")}
               variant="outline"
               className="border-[#D1D5DC] w-28 h-14 rounded-md text-[14px] hover:bg-gray-400 transition-all duration-300 ease-out"
             >
