@@ -29,8 +29,8 @@ function Register() {
   };
 
   return (
-    <div className="mt-6">
-      <LoginLogo />
+    <>
+      <LoginLogo className="mt-8" />
 
       {/* form section */}
       <Card className="w-[340px] rounded-3xl shadow-lg border-none bg-white px-2 mb-8">
@@ -216,7 +216,7 @@ function Register() {
           </Button>
         </CardContent>
       </Card>
-    </div>
+    </>
   );
 }
 
