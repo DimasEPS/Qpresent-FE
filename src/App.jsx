@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router";
 import Login from "./pages/Login";
+import Register from "./pages/Register";
 import RoleSelection from "./pages/RoleSelection";
 import StudentDashboard from "./pages/StudentDashboard";
 import LecturerDashboard from "./pages/LecturerDashboard";
@@ -15,6 +16,7 @@ function App() {
           <Route path="/role-selection" element={<RoleSelection />} />
           <Route path="/student" element={<StudentDashboard />} />
           <Route path="/lecturer" element={<LecturerDashboard />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </BrowserRouter>
     </div>

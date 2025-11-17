@@ -1,6 +1,12 @@
 import React from "react";
 import LoginLogo from "@/components/LoginLogo";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Mail, LockIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -11,11 +17,16 @@ function Login() {
       <LoginLogo />
 
       {/* form section */}
-      <Card className="w-[340px] rounded-3xl shadow-lg border-none bg-white p-2">
-        <CardContent className="flex flex-col">
+      <Card className="w-[340px] rounded-3xl shadow-lg border-none bg-white px-2">
+        <CardContent className="flex flex-col py-2">
+          <CardHeader>
+            <CardTitle className="text-center text-[14px] font-medium text-[#1F2937]">
+              Masuk ke Akun Anda
+            </CardTitle>
+          </CardHeader>
           {/* Form */}
           <form>
-            <div className="px-2 py-6 flex flex-col gap-6">
+            <div className="px-2 flex flex-col gap-6">
               <div className="grid gap-2">
                 <Label
                   htmlFor="email"
@@ -31,7 +42,7 @@ function Login() {
                     className="border border-[#E5E7EB] bg-[#F3F3F5] p-4 pl-12 rounded-[12px] text-sm w-full"
                     id="email"
                     type="email"
-                    placeholder="*@students.unila.ac.id"
+                    placeholder="*@unila.ac.id"
                     required
                   />
                 </div>
@@ -58,7 +69,7 @@ function Login() {
           </form>
 
           {/* button */}
-          <div className=" flex gap-4 justify-center">
+          <div className="mt-6 flex gap-4 justify-center">
             <Button
               onClick={() => (window.location.href = "/role-selection")}
               variant="outline"
@@ -75,6 +86,13 @@ function Login() {
               </div>
             </Button>
           </div>
+          <Button
+            onClick={() => (window.location.href = "/register")}
+            className="mt-2 text-primary-blue"
+            variant="link"
+          >
+            Daftar
+          </Button>
         </CardContent>
       </Card>
     </>
