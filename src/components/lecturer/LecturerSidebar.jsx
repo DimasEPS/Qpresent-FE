@@ -1,5 +1,12 @@
 import React from "react";
-import { BarChart3, BookOpen, CheckSquare, LayoutDashboard, LogOut, X } from "lucide-react";
+import {
+  BarChart3,
+  BookOpen,
+  CheckSquare,
+  LayoutDashboard,
+  LogOut,
+  X,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navItems = [
@@ -37,8 +44,12 @@ function LecturerSidebar({
               <BookOpen className="h-8 w-8 text-white" strokeWidth={2.5} />
             </div>
             <div>
-              <h2 className="text-xl font-bold text-[#1F2937] leading-tight">Lecturer Portal</h2>
-              <p className="text-[15px] text-[#6B7280] mt-1">Prof. Michael Chen</p>
+              <h2 className="text-xl font-bold text-[#1F2937] leading-tight">
+                Lecturer Portal
+              </h2>
+              <p className="text-[15px] text-[#6B7280] mt-1">
+                Prof. Michael Chen
+              </p>
             </div>
           </div>
 

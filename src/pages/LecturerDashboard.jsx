@@ -46,7 +46,9 @@ function LecturerDashboard() {
 
       {/* Class List */}
       <section className="rounded-3xl bg-white p-5 shadow-sm md:p-8">
-        <h2 className="mb-5 text-xl font-bold text-[#1F2937] md:text-2xl">Daftar Kelas</h2>
+        <h2 className="mb-5 text-xl font-bold text-[#1F2937] md:text-2xl">
+          Daftar Kelas
+        </h2>
         <div className="space-y-4">
           {classList.map((item, index) => (
             <ClassCard

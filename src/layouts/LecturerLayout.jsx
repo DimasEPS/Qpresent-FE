@@ -30,7 +30,11 @@ function LecturerLayout({ children, title, activeMenu = "dashboard" }) {
     <div className="flex min-h-screen w-full overflow-x-hidden bg-[#F5F5F5]">
       {/* Desktop sidebar - Fixed */}
       <div className="fixed left-0 top-0 z-30 hidden h-screen md:block">
-        <LecturerSidebar active={activeMenu} onNavigate={handleNavigate} onLogout={handleLogout} />
+        <LecturerSidebar
+          active={activeMenu}
+          onNavigate={handleNavigate}
+          onLogout={handleLogout}
+        />
       </div>
 
       {/* Mobile overlay sidebar with animation */}
@@ -38,7 +42,7 @@ function LecturerLayout({ children, title, activeMenu = "dashboard" }) {
         <>
           <div
             className={`fixed inset-0 z-40 bg-black/50 transition-opacity duration-300 md:hidden ${
-              isAnimating ? 'opacity-100' : 'opacity-0'
+              isAnimating ? "opacity-100" : "opacity-0"
             }`}
             onClick={handleClose}
             role="button"
@@ -47,7 +51,7 @@ function LecturerLayout({ children, title, activeMenu = "dashboard" }) {
           />
           <div
             className={`fixed left-0 top-0 z-50 h-full w-[85%] max-w-80 bg-white shadow-2xl transition-transform duration-300 ease-out md:hidden ${
-              isAnimating ? 'translate-x-0' : '-translate-x-full'
+              isAnimating ? "translate-x-0" : "-translate-x-full"
             }`}
           >
             <LecturerSidebar
@@ -75,7 +79,9 @@ function LecturerLayout({ children, title, activeMenu = "dashboard" }) {
               >
                 <Menu className="h-5 w-5" />
               </button>
-              <h1 className="text-2xl font-bold text-white md:text-4xl">{title}</h1>
+              <h1 className="text-2xl font-bold text-white md:text-4xl">
+                {title}
+              </h1>
             </div>
           </div>
         )}

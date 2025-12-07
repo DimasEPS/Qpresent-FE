@@ -36,7 +36,7 @@ function StudentLayout({ children, title, activeMenu = "dashboard" }) {
           <div
             className="fixed left-0 top-0 z-50 h-full w-[85%] max-w-80 transform bg-white shadow-2xl transition-transform duration-300 ease-out md:hidden"
             style={{
-              transform: isSidebarOpen ? 'translateX(0)' : 'translateX(-100%)',
+              transform: isSidebarOpen ? "translateX(0)" : "translateX(-100%)",
             }}
           >
             {/* TODO: Add StudentSidebar component */}
@@ -61,7 +61,9 @@ function StudentLayout({ children, title, activeMenu = "dashboard" }) {
               >
                 <Menu className="h-5 w-5" />
               </button>
-              <h1 className="text-2xl font-bold text-white md:text-4xl">{title}</h1>
+              <h1 className="text-2xl font-bold text-white md:text-4xl">
+                {title}
+              </h1>
             </div>
           </div>
         )}

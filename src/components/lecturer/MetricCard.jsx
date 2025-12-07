@@ -8,7 +8,9 @@ function MetricCard({ label, value, icon: Icon = BookOpen }) {
         <Icon className="h-4 w-4 md:h-6 md:w-6" strokeWidth={2.5} />
       </div>
       <div>
-        <p className="text-[11px] font-medium opacity-90 md:text-base">{label}</p>
+        <p className="text-[11px] font-medium opacity-90 md:text-base">
+          {label}
+        </p>
         <p className="text-3xl font-bold md:text-5xl">{value}</p>
       </div>
     </div>
