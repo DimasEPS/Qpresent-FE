@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import StudentLayout from "@/layouts/StudentLayout";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, Clock, Plus, QrCode, XCircle } from "lucide-react";
@@ -55,6 +56,12 @@ const statusConfig = {
 };
 
 function StudentDashboard() {
+  const navigate = useNavigate();
+
+  const handleScanQR = () => {
+    navigate("/student/scan");
+  };
+
   return (
     <StudentLayout title="Student Dashboard" activeMenu="dashboard">
       {/* Welcome Message */}
@@ -67,7 +74,10 @@ function StudentDashboard() {
       {/* Action Cards */}
       <div className="mb-6 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
         {/* Scan QR Code Card */}
-        <div className="group cursor-pointer rounded-3xl bg-linear-to-br from-[#3B5CFF] to-[#5C7CFF] p-6 shadow-lg transition-all hover:shadow-xl md:p-8">
+        <div
+          onClick={handleScanQR}
+          className="group cursor-pointer rounded-3xl bg-linear-to-br from-[#3B5CFF] to-[#5C7CFF] p-6 shadow-lg transition-all hover:shadow-xl md:p-8"
+        >
           <div className="flex items-start gap-4">
             <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-white/20 backdrop-blur-sm transition-transform group-hover:scale-110 md:h-16 md:w-16">
               <QrCode

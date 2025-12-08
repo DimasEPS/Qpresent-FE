@@ -7,6 +7,7 @@ import Register from "@/pages/Register";
 import RoleSelection from "@/pages/RoleSelection";
 import StudentDashboard from "@/pages/StudentDashboard";
 import StudentClassList from "@/pages/StudentClassList";
+import StudentScanQR from "@/pages/StudentScanQR";
 
 const AppRoutes = () => (
   <BrowserRouter>
@@ -17,6 +18,7 @@ const AppRoutes = () => (
       <Route path="/role-selection" element={<RoleSelection />} />
       <Route path="/student" element={<StudentDashboard />} />
       <Route path="/student/classes" element={<StudentClassList />} />
+      <Route path="/student/scan" element={<StudentScanQR />} />
       <Route path="/lecturer" element={<LecturerDashboard />} />
       <Route path="/lecturer/class/:id" element={<LecturerClassDetail />} />
     </Routes>
