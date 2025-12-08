@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import LecturerSidebar from "@/components/lecturer/LecturerSidebar";
 import { Menu } from "lucide-react";
 
@@ -6,11 +6,12 @@ function LecturerLayout({ children, title, activeMenu = "dashboard" }) {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
 
-  useEffect(() => {
-    if (isSidebarOpen) {
+  const handleOpen = () => {
+    setSidebarOpen(true);
+    requestAnimationFrame(() => {
       setIsAnimating(true);
-    }
-  }, [isSidebarOpen]);
+    });
+  };
 
   const handleClose = () => {
     setIsAnimating(false);
@@ -73,7 +74,7 @@ function LecturerLayout({ children, title, activeMenu = "dashboard" }) {
             <div className="flex items-center gap-2.5 px-4 py-5 md:px-8 md:pb-10 md:pt-8">
               <button
                 type="button"
-                onClick={() => setSidebarOpen(true)}
+                onClick={handleOpen}
                 className="rounded-full p-1.5 text-white hover:bg-white/10 md:hidden"
                 aria-label="Buka menu"
               >

@@ -1,13 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import {
-  BarChart3,
-  BookOpen,
-  CheckSquare,
-  LayoutDashboard,
-  LogOut,
-  X,
-} from "lucide-react";
+import { BookOpen, LayoutDashboard, LogOut, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navItems = [
@@ -15,19 +8,17 @@ const navItems = [
     key: "dashboard",
     label: "Dashboard",
     icon: LayoutDashboard,
-    path: "/lecturer",
+    path: "/student",
   },
-  { key: "classes", label: "Daftar Kelas", icon: BookOpen, path: "/lecturer" },
   {
-    key: "attendance",
-    label: "Presensi",
-    icon: CheckSquare,
-    path: "/lecturer",
+    key: "classes",
+    label: "Daftar Kelas",
+    icon: BookOpen,
+    path: "/student/classes",
   },
-  { key: "reports", label: "Laporan", icon: BarChart3, path: "/lecturer" },
 ];
 
-function LecturerSidebar({
+function StudentSidebar({
   active = "dashboard",
   onNavigate = () => {},
   onLogout = () => {},
@@ -63,11 +54,9 @@ function LecturerSidebar({
             </div>
             <div>
               <h2 className="text-xl font-bold text-[#1F2937] leading-tight">
-                Lecturer Portal
+                Student Portal
               </h2>
-              <p className="text-[15px] text-[#6B7280] mt-1">
-                Prof. Michael Chen
-              </p>
+              <p className="text-[15px] text-[#6B7280] mt-1">John Doe</p>
             </div>
           </div>
 
@@ -109,4 +98,4 @@ function LecturerSidebar({
   );
 }
 
-export default LecturerSidebar;
+export default StudentSidebar;

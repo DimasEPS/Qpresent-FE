@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import LecturerLayout from "@/layouts/LecturerLayout";
 import MetricCard from "@/components/lecturer/MetricCard";
 import ClassCard from "@/components/lecturer/ClassCard";
@@ -35,6 +36,12 @@ const classList = [
 ];
 
 function LecturerDashboard() {
+  const navigate = useNavigate();
+
+  const handleManageClass = (classCode) => {
+    navigate(`/lecturer/class/${classCode}`);
+  };
+
   return (
     <LecturerLayout title="Dashboard" activeMenu="dashboard">
       {/* Metrics */}
@@ -54,7 +61,7 @@ function LecturerDashboard() {
             <ClassCard
               key={`${item.code}-${index}`}
               {...item}
-              onManage={() => alert(`Kelola kelas ${item.code}`)}
+              onManage={() => handleManageClass(item.code)}
             />
           ))}
         </div>
