@@ -59,12 +59,14 @@ const ProtectedRoute = ({ children }) => {
 const AppRoutes = () => (
   <BrowserRouter>
     <Routes>
+      {/* Public routes */}
       <Route path="/" element={<Navigate to="/login" replace />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/verify-email" element={<VerifyEmail />} />
       <Route path="/verify-device" element={<VerifyDevice />} />
 
+      {/* Protected Student routes with Layout */}
       <Route
         path="/student"
         element={
@@ -80,6 +82,7 @@ const AppRoutes = () => (
         <Route path="scan-qr" element={<ScanQR />} />
       </Route>
 
+      {/* Protected Lecturer routes with Layout */}
       <Route
         path="/lecturer"
         element={
@@ -98,6 +101,7 @@ const AppRoutes = () => (
         <Route path="reports" element={<LecturerReports />} />
       </Route>
 
+      {/* Protected Admin routes with Layout */}
       <Route
         path="/admin"
         element={
@@ -113,10 +117,3 @@ const AppRoutes = () => (
         <Route path="reports" element={<AdminReports />} />
         <Route path="settings" element={<AdminSettings />} />
       </Route>
-
-      <Route path="*" element={<Navigate to="/login" replace />} />
-    </Routes>
-  </BrowserRouter>
-);
-
-export default AppRoutes;
